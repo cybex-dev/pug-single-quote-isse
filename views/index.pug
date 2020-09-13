@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    script.
+        console.log("Start")
+        console.log("Calling JSON.stringify on object");
+        const stringified = "!{JSON.stringify(object)}"
+
+        console.log("Calling JSON.parse on stringified object, calling obj.message")
+        console.log(stringified.message)
+
+        var obj = JSON.parse(stringified)
+        console.log("completed, printing obj.message")
+        console.log(obj.message)
